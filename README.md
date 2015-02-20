@@ -1,6 +1,8 @@
 #Course project for Data Science - Getting and Cleaning Data
  
-This script starts with the assumption that the Samsung data is available in the working directory in an unzipped UCI HAR Dataset folder
+This file shows the description of the processing steps performed to produce a tidy dataset from the dataset obtained from the "Human Activity Recognition Using Smartphones" experiment.
+
+The R script shown below starts with the assumption that the Samsung data is available in the working directory in an unzipped UCI HAR Dataset folder (provided by course instructor).
 
 
 ###1. Merge the training and the test sets to create one data set
@@ -84,7 +86,7 @@ library(dplyr)
 dataset <- rename(dataset, Activity=V2)
 ```
 
-###4. create a second, independent tidy data set with the average of each variable for each activity and each subject.
+###4. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 First, tidy the data in the long-tidy form
 ```{r}
