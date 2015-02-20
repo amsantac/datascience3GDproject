@@ -1,7 +1,4 @@
-setwd("C:/amsantac/other/eLearning/coursera/Data Science/3 Getting and Cleaning Data/course project/UCI HAR Dataset")
-
-# Read the activity labels and features files
-labels <- read.table("activity_labels.txt")
+# Read the features file
 features <- read.table("features.txt")
 
 # read the subject and activity test datasets and provide column names
@@ -48,14 +45,12 @@ dataset <- cbind(values2, subject, activity)
 
 # Read the activity labels file
 labels <- read.table("activity_labels.txt")
-colnames(labels) <- 
 
 # Merge the dataset with the activity labels set and rename the activity columns
 dataset <- merge(dataset, labels, by.x="Activity", by.y="V1")
-#dataset <- merge(labels, dataset, by.x="V1", by.y="Activity")
-
-#dataset <- rename(dataset, ActivityId=Activity)
 dataset <- dataset[, -1]
+
+library(dplyr)
 dataset <- rename(dataset, Activity=V2)
 
 # 5. create a second, independent tidy data set with the average of each variable for each activity and each subject.
@@ -72,13 +67,3 @@ dataset4 <- summarize(dataset3, Average=mean(Value))
 
 # Finally, export the dataset
 write.table(dataset4, "tidyDataset.txt", row.name=FALSE)
-
-
-# row bind the test and training datasets
-dataset <- rbind(test, train)
-
-# column bind the test datasets 
-test <- cbind(subject_test, y_test, x_test)
-
-# column bind the training datasets 
-train <- cbind(subject_train, y_train, x_train)
