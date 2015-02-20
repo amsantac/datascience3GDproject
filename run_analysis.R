@@ -1,3 +1,5 @@
+# 1. Merge the training and the test sets to create one data set
+
 # Read the features file
 features <- read.table("features.txt")
 
