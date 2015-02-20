@@ -1,6 +1,6 @@
 # Code book for the tidy dataset created with run_analysis.R
  
-##1. Information about the variables
+##Information about the variables
 
 The tidy dataset created with the run_analysis.R code includes the following four variables: Subject, Activity, Measurement and Average, which are described below:
 
