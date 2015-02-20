@@ -43,7 +43,7 @@ activity <- rbind(y_test, y_train)
 # column bind subject set, activity set and values set
 dataset <- cbind(values2, subject, activity)
 
-# 3. Uses descriptive activity names to name the activities in the data se
+# 3. Uses descriptive activity names to name the activities in the data set
 
 # Read the activity labels file
 labels <- read.table("activity_labels.txt")
