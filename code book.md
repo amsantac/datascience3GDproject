@@ -2,7 +2,7 @@
  
 ##1. Information about the variables
 
-The tidy dataset created with the run_analysis.R code includes four variables: Subject, Activity, Measurement and Average.
+The tidy dataset created with the run_analysis.R code includes the following four variables: Subject, Activity, Measurement and Average, which are described below:
 
 ###1. Subject: 
 Each row identifies the subject who performed each activity that was measured. Its range is from 1 to 30 (integer values). The units of this variable correspond to individuals
@@ -17,6 +17,8 @@ It corresponds to each of the features (66 in total) that were measured during t
 This column shows the average of each variable for each activity and each subject. The units for each observation is given in the same units as the variables in the original dataset as described in the README file in the UCI HAR Dataset folder
 
 ===========
+
+The dimensions of the tidy data set correspond to 11880 rows and 4 columns. The four columns correspond to the four variables mentioned above. The 11880 rows result from the combination of 30 subjects performing 6 activities measured by 66 measurements.
 
 A full description of the data collected from the accelerometers from the Samsung Galaxy S smartphone for this experiment is available at the site where the data was obtained: 
 
